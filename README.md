@@ -6,7 +6,7 @@ A simple Python script which runs both Winget and Chocolatey to check if there a
 
 ### Full
 
-This version is the full script, as I wrote it, which runs both Winget and Chocolatey to check for updates. I use both package managers, but not everyone will have both or want to use both. However, for those who **do** use both, you'll want to download **cli_upgrade_full.py**.
+This version is the full script, as I wrote it, which runs both Winget and Chocolatey to check for updates. I use both package managers, but not everyone will have both or want to use both. However, for those who **do** use both, you'll want to download **cli_upgrade_full.py**. There is one major downside to this version, however: the Chocolatey portion only upgrades applications that were installed with Chocolatey. Winget still attempts to upgrade all packages, provided they're compatible with Winget. This is why I would recommend the Winget Only version unless you're a power user that uses both and want to keep your whole system as up-to-date as possible.
 
 ### Winget Only
 
@@ -20,4 +20,4 @@ This is identical to the Winget Only version except it lacks the two flags to au
 
 This is entirely up to you how you use it but if you wanted to automate it, you could run **Task Scheduler** to create a task to run the script on a schedule that you prefer.
 
-**Note:** At the time of this commit, you will need to manually run the script as an administrator to use it correctly. If you don't, it likely won't run available updates and if you're using the full version, it will also force you to input a Y/N response to a warning with Chocolatey stating that issues might occur if you go ahead with updates in standard user mode.
+**NOTE:** At the time of this commit, you will need to manually run the script as an administrator to use it correctly. If you don't, it likely won't run available updates and if you're using the full version, it will also force you to input a Y/N response to a warning with Chocolatey stating that issues might occur if you go ahead with updates in standard user mode. I'm looking into safe ways to get around this issue.
